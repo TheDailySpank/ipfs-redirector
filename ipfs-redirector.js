@@ -13,22 +13,19 @@
 (function() {
     'use strict';
 
-    var ipfsHost = "http://127.0.0.1"   // default settings if running ipfs daemon on local machine
-    var ipfsPort = ":8080"              // include colon (:) when specifying port, eg ":8080"
+    var ipfsHost = "http://127.0.0.1:8080"   // default settings if running ipfs daemon on local machine
 
     // ipfs.io gateway
-    // var ipfsHost = "https://ipfs.io/ipfs"
-    // var ipfsPort = ":443"
+    // var ipfsHost = "https://ipfs.io"
 
     // Cloudflare gateway
     // var ipfsHost = "https://cloudflare-ipfs.com"
-    // var ipfsPort = ":443"
 
     var anchors = document.querySelectorAll('a');
 
     for (var i = 0; i < anchors.length; i++) {
         var regex = /.*(\/ipfs\/Qm\w{44}.*)/g;
-        anchors[i].href = anchors[i].href.replace(regex, ipfsHost + ipfsPort + '$1');
+        anchors[i].href = anchors[i].href.replace(regex, ipfsHost + '$1');
     }
 
 })();
