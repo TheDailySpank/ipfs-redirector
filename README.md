@@ -5,4 +5,4 @@ No more having to edit the link in the address bar manually.
 
 Add this script to Greasemonkey or Tampermonkey to automatically re-format IPFS links to a server of your choice. By default, it's http://127.0.0.1:8080.
 
-Edit the 'ipfsHost' and 'ipfsPort' vars to your liking or simply comment those two lines out and uncomment another one of the listed gateways.
+Edit the 'ipfsHost' to your liking or simply comment the default out and uncomment another one of the listed gateways.
